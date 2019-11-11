@@ -1,0 +1,162 @@
+.menu__header {
+	padding: 15px 55px 15px 55px;
+  position: fixed;
+  top: 0;
+  left: 0;
+	z-index: 1000; 
+  transition: all ease-out .5s;
+	display: flex;
+	justify-content: space-between;
+  font-family: 'Raleway';
+}
+.logo__menu{
+	width: 50px;
+	height: 50px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	margin: 10px;
+	cursor: pointer;
+}
+.menu__left{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+  width: auto;
+}
+.menu__list{
+	display: flex;
+	margin: 16px 0 16px 20px;
+	padding-left: 40px;
+}
+.menu__list_item{
+	list-style-type: none;
+	margin: 15px;
+	cursor: pointer;
+}
+.menu__link{
+  text-decoration: none;
+	padding: 15px 5px;
+	margin: 0 16px;
+	color: #fff;
+	font-size: 1.125em;
+	font-weight: 400;
+	cursor: pointer;
+  transition: 0.3s ease;
+  position: relative;
+  // text-transform: uppercase;
+}
+.menu__link:before {
+  content: '';
+  background-color: #9f144e;
+  height: 2px;
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  bottom: 10px;
+}
+
+.slide__icon{
+	font-size: 50px;
+	color: #fff;
+	display: none;
+	cursor: pointer;
+}
+.menu__header span {
+	position: absolute;
+	top: 0;
+	right: 25px;
+	font-size: 48px;
+	margin-left: 50px;
+	display: none;
+	line-height: 1;
+	cursor: pointer;
+}
+.menu__link:hover, .menu__link:active{
+	color: #9f144e;
+}
+
+
+@media all and (max-width: 1280px) {
+	.menu__header{
+		padding: 5px 25px 5px 25px;
+	}
+	.menu__list_item{
+		margin: 0;
+	}
+	.menu__list{
+		padding-left: 0;
+	}
+}
+@media all and (min-width: 981px) {
+	.menu__header{
+		width: 100%!important;
+	}
+}
+@media all and (max-width: 980px) {
+	.openNav{
+		z-index: 3;
+		left: 0;
+		width: 100%;
+		background: rgb(34,34,34);
+		height: 75px;
+		display: block;
+		position: fixed;
+		top: 0;
+		transition: all ease-out .3s;
+	}
+	.menu__header{
+		padding: 5px 0;
+		position: static;
+		padding: 0;
+		background: rgb(34,34,34) !important;
+	}
+	.menu__left{
+		flex-direction: column;
+		width: 250px;
+	}
+	.menu__list{
+		flex-direction: column;
+		margin: 10px 0;
+	}
+	.menu__list_item{
+		margin: 5px 0; 
+	}
+	.menu__link {
+		padding: 5px;
+		display: block;
+  }
+  .menu__link:before {
+    bottom: 0;
+  }
+	.slide__icon{
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 25px;
+		position: fixed;
+		color: #979797;
+		z-index: 3;
+	}
+	//Menu Slide
+	.menu__header {
+		text-align: center;
+		overflow: hidden;
+		height: 100%;
+		width: 0;
+		position: fixed;
+		z-index: 4;
+		top: 0;
+		left: 0;
+		display: block;
+		background-color: rgb(34,34,34);
+		transition: 0.4s
+					cubic-bezier(0, .52, 0, 1);
+    padding-top: 30px;
+    overflow: auto;
+    white-space: nowrap;
+	}
+	.menu__header span {
+		display: block;
+	}
+}
