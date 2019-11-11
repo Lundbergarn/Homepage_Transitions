@@ -27,7 +27,7 @@ class App extends Component {
                   timeout={{enter: 750, exit: 150}}
                 >
                   <Switch location={location}>
-                    <Route exact path="/home" component={Home}/>
+                    <Route exact path="/" component={Home}/>
                     <Route path="/projects" component={Projects} />
                     <Route path="/about" component={About} />
                   </Switch>

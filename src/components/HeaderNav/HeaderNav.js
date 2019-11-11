@@ -3,7 +3,7 @@ import styles from './HeaderNav.module.scss';
 import { NavLink } from 'react-router-dom';
 
 const links = [
-  {link: '/home', text: 'Home'},
+  {link: '/', text: 'Home'},
   {link: '/projects', text: 'Projects'},
   {link: '/about', text: 'About'},
 ];
