@@ -6,6 +6,7 @@ const links = [
   {link: '/', text: 'Home'},
   {link: '/projects', text: 'Projects'},
   {link: '/about', text: 'About'},
+  {link: '/contact', text: 'Contact'},
 ];
 
 
@@ -53,11 +54,12 @@ class HeaderNav extends Component {
   linksMarkup = () => {
     return links.map((link) => {
       return (
-        <li className={styles.menu__list_item} key={link.link}>
+        <li className={styles.menu__list_item} key={link.text}>
           <NavLink
             onClick={() => this.closeNavbar()}
             to={link.link}
             className={styles.menu__link}
+            exact
           >
             {link.text}
           </NavLink>

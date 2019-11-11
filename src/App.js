@@ -5,6 +5,7 @@ import { play, exit } from './timelines/index';
 import Home from './views/Home'
 import About from './views/About'
 import Projects from './views/Projects'
+import Contact from './views/Contact'
 import HeaderNav from './components/HeaderNav/HeaderNav';
 
 class App extends Component {
@@ -28,8 +29,9 @@ class App extends Component {
                 >
                   <Switch location={location}>
                     <Route exact path="/" component={Home}/>
-                    <Route path="/projects" component={Projects} />
-                    <Route path="/about" component={About} />
+                    <Route exact path="/projects" component={Projects} />
+                    <Route exact path="/about" component={About} />
+                    <Route exact path="/contact" component={Contact} />
                   </Switch>
                 </Transition>
               </TransitionGroup>
